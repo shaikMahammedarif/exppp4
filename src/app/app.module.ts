@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FacultyComponent } from './faculty/faculty.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FacultyComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [
-    provideClientHydration(withEventReplay())
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
